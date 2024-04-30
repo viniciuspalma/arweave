@@ -13,7 +13,7 @@
   outputs = { self, nixpkgs, utils, ... }: utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
-      arweave = pkgs.callPackage ./nix/arweave.nix
+      arweave = pkgs.callPackage ./nix/arweave.nix {};
     in
     {
       packages = utils.lib.flattenTree {
